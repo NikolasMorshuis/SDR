@@ -1,0 +1,4 @@
+paths:
+  fastmri_data: "./sample_data/fastMRI/knee"
+  initial_recons: "./sample_data/initial_recons"
+  output_dir: "./results"
