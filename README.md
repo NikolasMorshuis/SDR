@@ -2,13 +2,12 @@
 
 Official implementation of our MICCAI 2025 paper: 
 
-_"Mind the Detail: Uncovering Clinically Relevant
-Image Details in Accelerated MRI with
-Semantically Diverse Reconstructions"_, 
+**"Mind the Detail: Uncovering Clinically Relevant Image Details in Accelerated MRI with Semantically Diverse Reconstructions"**
 
 ![Teaser Figure](figs/teaser_fig.png)
 
 ## 🔗 Paper
+
 [Mind the Detail: Uncovering Clinically Relevant
 Image Details in Accelerated MRI with
 Semantically Diverse Reconstructions](https://arxiv.org/abs/2507.00670)
@@ -31,13 +30,25 @@ Semantically Diverse Reconstructions](https://arxiv.org/abs/2507.00670)
 
 ## 🚀 Getting Started
 
+### Clone the repository
+```bash
+  git clone --recursive https://github.com/NikolasMorshuis/SDR
+  cd SDR
+```
+
 ### Install dependencies
+You can create a virtual environment:
+```bash
+  python -m venv venv
+  source venv/bin/activate  # On Windows use venv\Scripts\activate
+```
+Then install the required packages:
 ```bash
   pip install -r requirements.txt
 ```
 
 ### Download models and sample data
-You can download the pre-trained models and sample data with the following command:
+You can download the pre-trained models and example data using:
 ```bash
   wget --content-disposition -P ./models "https://nc.mlcloud.uni-tuebingen.de/index.php/s/85eWEAbm8S2yWLS/download"
   wget --content-disposition -P ./models "https://nc.mlcloud.uni-tuebingen.de/index.php/s/GAS9fGAdZsBKQfJ/download"
@@ -49,7 +60,7 @@ You can download the pre-trained models and sample data with the following comma
 ```
 
 ### Prepare the format of the fastmri-plus annotations
-This creates a new folder `labels_yolo_knee` with the annotations in the YOLO format at `./data`
+This will create a new folder `labels_yolo_knee` containing the annotations in the YOLO format, located in `./data`
 ```bash
   python yolo_functions/fastmri_plus.py
 ```
@@ -79,7 +90,7 @@ Thanks to the authors for their great work and for making their code available!
 If you find this work useful, please cite our paper:
 
 ```bibtex
-@misc{morshuis2025minddetailuncoveringclinically,
+@misc{morshuis2025sdr,
       title={Mind the Detail: Uncovering Clinically Relevant Image Details in Accelerated MRI with Semantically Diverse Reconstructions}, 
       author={Jan Nikolas Morshuis and Christian Schlarmann and Thomas Küstner and Christian F. Baumgartner and Matthias Hein},
       year={2025},
