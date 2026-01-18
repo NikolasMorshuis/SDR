@@ -74,6 +74,13 @@ You can run the demo with the following command:
 ### Use your own data
 You can use your own fastmri data and your own initial reconstructions. Just set the paths in `config.yaml` and run the demo script as shown above.
 
+### Evaluation Protocol & Data Split 
+To ensure efficient evaluation focused on clinically relevant regions, the metrics reported in the paper were calculated on a curated subset of the data:
+
+- Pathology Focus: We filtered for slices containing pathology annotations (n=1005).
+- Subsampling: To reduce redundancy between adjacent slices and computational load, we selected every second slice.
+
+The final evaluation set consists of 503 slices.
 
 ## Acknowledgements
 This project uses some functionalities from the following repositories:
